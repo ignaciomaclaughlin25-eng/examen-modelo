@@ -237,6 +237,11 @@ button,
   display: inline-block;
   text-align: center;
 }
+  /* Estilo específico para hacer este botón más chico */
+.button-small {
+  padding: 0.4rem 1rem; /* Reduce el relleno interno */
+  font-size: 0.9rem; /* Reduce ligeramente el texto */
+}
 
 .theme-dark button,
 .theme-dark .button {
@@ -320,3 +325,4 @@ button:hover,
         margin-top: 0.5rem;
     }
 }
+
