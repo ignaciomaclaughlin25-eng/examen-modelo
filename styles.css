@@ -22,9 +22,10 @@ body {
   color: #f5f5f5;
 }
 
-.theme-blue {
-  background-color: #0d1b2a;
-  color: #e0eaff;
+/* NUEVO TEMA CLARO */
+.theme-light {
+  background-color: #f5f5f5; /* Fondo claro */
+  color: #111; /* Letras oscuras */
 }
 
 /* Layout general */
@@ -50,20 +51,22 @@ nav a {
   font-weight: 500;
 }
 
+/* Redefinimos los estilos de Header para ambos temas */
 .theme-dark header {
   background: rgba(30, 30, 30, 0.9);
 }
 
-.theme-blue header {
-  background: rgba(13, 27, 42, 0.9);
+.theme-light header {
+  background: rgba(255, 255, 255, 0.9); /* Fondo claro con transparencia */
+  color: #111;
 }
 
 .theme-dark nav a {
   color: #f5f5f5;
 }
 
-.theme-blue nav a {
-  color: #e0eaff;
+.theme-light nav a {
+  color: #333; /* Links en oscuro */
 }
 
 nav a:hover {
@@ -110,12 +113,14 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Redefinimos los estilos de Card para ambos temas */
 .theme-dark .card {
   background-color: #1b1b1b;
 }
 
-.theme-blue .card {
-  background-color: #1b263b;
+.theme-light .card {
+  background-color: #ffffff; /* Fondo de tarjeta blanco */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
 }
 
 .card h1,
@@ -125,6 +130,35 @@ footer {
 
 .card p {
   margin-bottom: 0.5rem;
+}
+
+/* --- Estilos para la ficha personal y la imagen --- */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-header h1 {
+  margin-bottom: 0;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid; 
+}
+
+/* Redefinimos el color del borde de la foto para ambos temas */
+.theme-dark .profile-pic {
+  border-color: #f97316;
+}
+
+.theme-light .profile-pic {
+  border-color: #333; /* Borde oscuro en tema claro */
 }
 
 /* Lista de datos personales */
@@ -137,7 +171,7 @@ footer {
   margin-bottom: 0.3rem;
 }
 
-/* Sección servicios */
+/* Sección servicios/intereses */
 .servicios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -150,12 +184,14 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Redefinimos los estilos de Servicio para ambos temas */
 .theme-dark .servicio {
   background-color: #151515;
 }
 
-.theme-blue .servicio {
-  background-color: #1b2838;
+.theme-light .servicio {
+  background-color: #eee; /* Fondo de tarjeta de servicio gris claro */
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .servicio h3 {
@@ -207,18 +243,25 @@ button,
   text-decoration: none;
   display: inline-block;
   text-align: center;
+} /* <-- ¡REGLA PRINCIPAL CERRADA CORRECTAMENTE! */
+
+/* Estilo específico para hacer este botón más chico */
+.button-small {
+  padding: 0.4rem 1rem; /* Reduce el relleno interno */
+  font-size: 0.9rem; /* Reduce ligeramente el texto */
 }
 
+/* Redefinimos los botones para el tema claro */
 .theme-dark button,
 .theme-dark .button {
   background-color: #f97316;
   color: #111;
 }
 
-.theme-blue button,
-.theme-blue .button {
-  background-color: #fbbf24;
-  color: #0d1b2a;
+.theme-light button,
+.theme-light .button {
+  background-color: #3b82f6; /* Un azul brillante como acento */
+  color: #ffffff;
 }
 
 button:hover,
@@ -240,16 +283,54 @@ button:hover,
   color: #f87171;
 }
 
-/* Responsivo */
+/* ==================================== */
+/* ZONA RESPONSIVE (Optimizada) */
+/* ==================================== */
+
+/* Tablet y Móvil (Hasta 600px) */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    gap: 0.8rem;
-    align-items: flex-start;
-  }
+    /* HEADER: Apilamos elementos para que entren mejor */
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+    }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
+    /* Reducimos el padding en pantallas pequeñas */
+    main {
+        padding: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    /* Grid de intereses: Pasa a ser una sola columna */
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* El selector de tema se alinea a la derecha para no interrumpir el nav */
+    .theme-selector {
+        align-self: flex-end;
+    }
+}
+
+/* Móvil Pequeño (Hasta 450px) */
+@media (max-width: 450px) {
+    /* Ficha Personal: Foto y Título se apilan para ahorrar espacio verticalmente */
+    .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .profile-header h1 {
+        margin-top: 0.5rem;
+    }
+}
