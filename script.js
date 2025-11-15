@@ -7,7 +7,7 @@ $(document).ready(function () {
   // ======================
   function applyTheme(theme) {
     // 1. Quitamos posibles temas anteriores
-    $("body").removeClass("theme-dark theme-blue");
+    $("body").removeClass("theme-dark theme-light");
 
     // 2. Agregamos el tema elegido
     $("body").addClass("theme-" + theme);
