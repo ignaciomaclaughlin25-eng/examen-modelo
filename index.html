@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ignacio - Ficha Personal y Contacto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Ignacio • Marketing Digital</div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Intereses</a>
+        <a href="contacto.html">Agradecimiento</a>
+      </nav>
+
+      <div class="theme-selector">
+        <label for="theme-selector">Tema:</label>
+        <select id="theme-selector">
+          <option value="dark">Oscuro</option>
+          <option value="blue">Azul</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section class="card profile-card">
+        <div class="profile-header">
+          <img src="fotonacho.jpg" alt="Foto de perfil de Ignacio" class="profile-pic" />
+          <h1>Hola, soy Ignacio</h1>
+        </div>
+
+        <p>
+          Soy profesional del <strong>Marketing Digital</strong> y estudio
+          <strong>Negocios Digitales</strong> en la UAD.
+        </p>
+
+        <ul class="datos-personales">
+          <li>📍 Vivo en Buenos Aires.</li>
+          <li>⚽ He jugado al fútbol.</li>
+          <li>👨‍👦‍👦 Tengo dos hermanos.</li>
+          <li>🎂 Tengo 21 años.</li>
+          <li>🏟️ Soy hincha de River Plate.</li>
+        </ul>
+      </section>
+
+      <section class="card contact-form-section">
+        <h2>Contactame Directamente</h2>
+        <p>
+          Completá el formulario para que charlemos sobre tu proyecto.
+        </p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" />
+            <span class="error-text" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <span class="error-text" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Contame brevemente qué necesitás..."
+            ></textarea>
+            <span class="error-text" id="message-error"></span>
+          </div>
+
+          <button type="submit">Enviar</button>
+
+          <div id="form-message"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Ignacio - Marketing Digital · Buenos Aires, Argentina
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
