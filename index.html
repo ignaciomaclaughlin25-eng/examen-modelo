@@ -13,7 +13,7 @@
       <nav>
         <a href="index.html">Inicio</a>
         <a href="intereses.html">Intereses</a>
-        <a href="agradecimiento.html">Agradecimiento</a>
+        <a href="portafolio.html">Portafolio</a>
       </nav>
 
       <div class="theme-selector">
@@ -26,6 +26,7 @@
     </header>
 
     <main>
+      <!-- FICHA PERSONAL CON IMAGEN Y DATOS -->
       <section class="card profile-card">
         <div class="profile-header">
           <img src="fotonacho.jpg" alt="Foto de perfil de Ignacio" class="profile-pic" />
@@ -45,7 +46,23 @@
           <li>🏟️ Soy hincha de River Plate.</li>
         </ul>
       </section>
+      
+      <!-- NUEVA SECCIÓN: ENLACE AL PORTAFOLIO -->
+      <section class="card secondary-interest">
+        <h2>Mis Habilidades Técnicas</h2>
+        <p>
+          Tengo experiencia en el desarrollo de front-end y gestión de proyectos digitales.
+          Podés ver un detalle de mi *stack* tecnológico en mi portafolio.
+        </p>
+        <!-- Enlace a la nueva página de Portafolio -->
+        <a href="portafolio.html" 
+           class="button" 
+           style="margin-top: 1rem;">
+           Ver Stack y Proyectos
+        </a>
+      </section>
 
+      <!-- FORMULARIO DE CONTACTO -->
       <section class="card contact-form-section">
         <h2>Contactame Directamente</h2>
         <p>
@@ -87,7 +104,9 @@
       © 2025 Ignacio - Marketing Digital · Buenos Aires, Argentina
     </footer>
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JS propio (Manejo de temas y Validación) -->
     <script src="script.js"></script>
   </body>
 </html>
