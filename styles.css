@@ -22,237 +22,78 @@ body {
   color: #f5f5f5;
 }
 
-.theme-blue {
-  background-color: #0d1b2a;
-  color: #e0eaff;
+/* NUEVO TEMA CLARO */
+.theme-light {
+  background-color: #f5f5f5; /* Fondo claro */
+  color: #111; /* Letras oscuras */
 }
 
 /* Layout general */
 header {
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+/* ... */
 }
 
-header .logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  font-weight: 500;
-}
-
+/* Redefinimos los estilos de Header para el tema claro */
 .theme-dark header {
   background: rgba(30, 30, 30, 0.9);
 }
 
-.theme-blue header {
-  background: rgba(13, 27, 42, 0.9);
+.theme-light header {
+  background: rgba(255, 255, 255, 0.9); /* Fondo claro con transparencia */
+  color: #111;
 }
 
 .theme-dark nav a {
   color: #f5f5f5;
 }
 
-.theme-blue nav a {
-  color: #e0eaff;
+.theme-light nav a {
+  color: #333; /* Links en oscuro */
 }
+/* ... */
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  flex: 1;
-  padding: 2rem;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-/* Selector de tema */
-.theme-selector {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.theme-selector label {
-  font-size: 0.9rem;
-}
-
-.theme-selector select {
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-/* Tarjeta principal */
-.card {
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
+/* Redefinimos los estilos de Card para el tema claro */
 .theme-dark .card {
   background-color: #1b1b1b;
 }
 
-.theme-blue .card {
-  background-color: #1b263b;
+.theme-light .card {
+  background-color: #ffffff; /* Fondo de tarjeta blanco */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
 }
+/* ... */
 
-.card h1,
-.card h2 {
-  margin-bottom: 1rem;
-}
-
-.card p {
-  margin-bottom: 0.5rem;
-}
-
-/* --- Estilos para la ficha personal y la imagen --- */
-.profile-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.profile-header h1 {
-  margin-bottom: 0;
-}
-
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid; 
-}
-
-.theme-dark .profile-pic {
-  border-color: #f97316;
-}
-
-.theme-blue .profile-pic {
-  border-color: #fbbf24;
-}
-/* ----------------------------------------------------- */
-
-/* Lista de datos personales */
-.datos-personales {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.datos-personales li {
-  margin-bottom: 0.3rem;
-}
-
-/* Sección servicios/intereses */
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.servicio {
-  border-radius: 10px;
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
+/* Redefinimos los estilos de Servicio para el tema claro */
 .theme-dark .servicio {
   background-color: #151515;
 }
 
-.theme-blue .servicio {
-  background-color: #1b2838;
+.theme-light .servicio {
+  background-color: #eee; /* Fondo de tarjeta de servicio gris claro */
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
-.servicio h3 {
-  margin-bottom: 0.5rem;
+/* Redefinimos el color del borde de la foto para el tema claro */
+.theme-dark .profile-pic {
+  border-color: #f97316;
 }
 
-/* Formulario */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.theme-light .profile-pic {
+  border-color: #333; /* Borde oscuro en tema claro */
 }
+/* ... */
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  margin-bottom: 0.3rem;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.6rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font: inherit;
-}
-
-.input-error {
-  border-color: #f87171;
-}
-
-.error-text {
-  color: #f87171;
-  font-size: 0.85rem;
-  margin-top: 0.2rem;
-}
-
-/* Botón */
-button,
-.button {
-  border: none;
-  border-radius: 999px;
-  padding: 0.6rem 1.4rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
-  /* Estilo específico para hacer este botón más chico */
-.button-small {
-  padding: 0.4rem 1rem; /* Reduce el relleno interno */
-  font-size: 0.9rem; /* Reduce ligeramente el texto */
-}
-
+/* Redefinimos los botones para el tema claro (usaremos el color azul del tema anterior como acento) */
 .theme-dark button,
 .theme-dark .button {
   background-color: #f97316;
   color: #111;
 }
 
-.theme-blue button,
-.theme-blue .button {
-  background-color: #fbbf24;
-  color: #0d1b2a;
+.theme-light button,
+.theme-light .button {
+  background-color: #3b82f6; /* Un azul brillante o color de acento */
+  color: #ffffff;
 }
 
 button:hover,
@@ -325,4 +166,5 @@ button:hover,
         margin-top: 0.5rem;
     }
 }
+
 
