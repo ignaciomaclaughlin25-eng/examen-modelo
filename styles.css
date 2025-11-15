@@ -243,7 +243,7 @@ button,
   text-decoration: none;
   display: inline-block;
   text-align: center;
-} /* <-- ¡REGLA PRINCIPAL CERRADA CORRECTAMENTE! */
+} 
 
 /* Estilo específico para hacer este botón más chico */
 .button-small {
